@@ -1,0 +1,79 @@
+20:45:51,773 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 56
+
+20:45:51,774 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 148
+
+20:45:51,780 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 217
+
+20:45:51,780 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 221
+
+20:45:51,781 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 37.8508247694686
+
+20:45:51,784 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 60.665993712631526
+
+20:45:51,802 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 83.04644250851652
+
+20:45:51,803 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 85.7091072193568
+
+20:45:51,803 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 118.64792865645914
+
+20:45:51,803 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 138.5445223203987
+
+20:46:13,034 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 56
+
+20:46:13,037 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 95
+
+20:46:13,041 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 18.28181362802817
+
+20:46:13,041 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 64.30523383525491
+
+20:46:13,042 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 66.37542661191961
+
+20:46:13,043 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 97.26462282108645
+
+20:46:13,055 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 143.3141953562323
+
+20:46:13,056 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 181.48992789947465
+
+20:46:13,056 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 202.66878163221
+
+20:46:13,056 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 207.96321158811264
+
+20:54:20,474 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 40
+
+20:54:20,480 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 137
+
+20:54:20,480 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 143
+
+20:54:20,480 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 181
+
+20:54:20,480 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 199
+
+20:54:20,480 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 288
+
+20:54:20,492 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 0.3134766803549016
+
+20:54:20,494 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 50.19401722303416
+
+20:54:20,494 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 50.77538126595448
+
+20:54:20,494 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 91.17074491516394
+
+20:56:20,306 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 46
+
+20:56:20,314 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 55
+
+20:56:20,314 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 116
+
+20:56:20,314 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 156
+
+20:56:20,314 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 225
+
+20:56:20,315 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 300
+
+20:56:20,315 DEBUG main debuglog:countTotalNumberOfPassengers:30 - Counting number of passengers = 348
+
+20:56:20,333 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 23.973288881288724
+
+20:56:20,333 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 72.53504778562436
+
+20:56:20,334 DEBUG main debuglog:countTotalLuggageWeight:42 - Counting luggage weight = 97.26814272108692

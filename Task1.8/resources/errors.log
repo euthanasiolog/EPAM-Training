@@ -1,0 +1,7 @@
+
+
+20:54:20,503 ERROR main logfile:main:77 - Number of passengers can't be < 0!: -50.0
+
+20:54:41,866 ERROR main logfile:main:77 - Number of carriages can't be < 0!: -1.0
+
+20:55:59,722 ERROR main logfile:main:75 - Wrong type of comfort!: ARRR
