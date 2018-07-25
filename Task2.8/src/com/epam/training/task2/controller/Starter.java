@@ -14,7 +14,6 @@ import com.epam.training.task2.exception.WrongInputFileNameException;
 import com.epam.training.task2.model.entity.Word;
 import com.epam.training.task2.logic.Sorter;
 import com.epam.training.task2.work.with.file.reading.Reader;
-import com.epam.training.task2.view.ConsoleWriter;
 import com.epam.training.task2.work.with.file.splitting.Splitter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,17 +27,19 @@ public class Starter {
             //reading lines of input file and print them
             List<String> linesOfFile = Reader.readFile(fileName);
             System.out.println("Printing file:");
-            ConsoleWriter.printFile(linesOfFile);
+            for (String line : linesOfFile){
+                System.out.println(line);
+            }
 
             //splitting words and print them
             List<Word> words = new ArrayList<>();
             Splitter.getWords(linesOfFile, words);
             System.out.println("Words:");
-            ConsoleWriter.printWords(words);
+            System.out.println(words);
 
             System.out.println("After sort words with first vowel letter by first consonant letter:");
             Sorter.sortWordsWithFirstVowelLetterByFirstConsonantLetter(words);
-            ConsoleWriter.printWords(words);
+            System.out.println(words);
         } catch (IOException e) {
             System.err.println("The problem with file!");
         } catch (WrongInputFileNameException e) {
