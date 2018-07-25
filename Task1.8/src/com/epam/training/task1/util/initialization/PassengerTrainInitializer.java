@@ -13,7 +13,6 @@ import com.epam.training.task1.exception.WrongTypeOfComfortException;
 import com.epam.training.task1.model.entity.PassengerTrain;
 import com.epam.training.task1.model.entity.carriage.freight.FreightCarriage;
 import com.epam.training.task1.model.entity.carriage.passenger.PassengerCarriage;
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import java.util.Random;
 
@@ -33,7 +32,7 @@ public class PassengerTrainInitializer {
         }
         passengerTrain.setName(NAMES[getRandomInt(0, NAMES.length)]);
         Random random = new Random();
-        logger.log(Level.INFO, "Initialization of carriages...");
+        logger.info( "Initialization of carriages...");
         for (int i = 0; i < numberOfCarriages; i++){
             if (random.nextBoolean()){
                 PassengerCarriage passengerCarriage = new PassengerCarriage();

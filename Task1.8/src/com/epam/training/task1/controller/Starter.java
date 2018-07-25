@@ -18,67 +18,62 @@ import com.epam.training.task1.logic.Searcher;
 import com.epam.training.task1.logic.Sorter;
 import com.epam.training.task1.util.initialization.IntegerInitializer;
 import com.epam.training.task1.util.initialization.PassengerTrainInitializer;
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 
 public class Starter {
 
-    private static final Logger LOG_INFO = Logger.getLogger(Starter.class);
-    private static final Logger LOG_ERROR = Logger.getLogger("logfile");
+    private static final Logger LOG = Logger.getLogger(Starter.class);
 
     public static void main(String[] args) {
         try {
-            LOG_INFO.setLevel(Level.DEBUG);
-            LOG_INFO.log(Level.INFO, "Application started...");
-            LOG_INFO.log(Level.INFO, "Making passenger train...");
+            LOG.info("Application started...");
+            LOG.info("Making passenger train...");
 
             //making passenger train
             PassengerTrain passengerTrain = new PassengerTrain();
 
-            LOG_INFO.log(Level.INFO, "Passenger train was done...");
-            LOG_INFO.log(Level.INFO, "Initialization of passenger train...");
+            LOG.info("Passenger train was done...");
+            LOG.info("Initialization of passenger train...");
 
             //initialization passenger train with specific number of carriages
             int numberOfCarriages = 10;
-            PassengerTrainInitializer.initPassengerTrain(passengerTrain, numberOfCarriages, LOG_INFO);
+            PassengerTrainInitializer.initPassengerTrain(passengerTrain, numberOfCarriages, LOG);
 
-            LOG_INFO.log(Level.INFO, "Initialization was successfully made...");
-            LOG_INFO.log(Level.INFO, "Printing information about passenger train:");
+            LOG.info("Initialization was successfully made...");
+            LOG.info("Printing information about passenger train:");
 
             //printing information about passenger train
-            LOG_INFO.log(Level.INFO, passengerTrain);
-            LOG_INFO.log(Level.INFO, "Testing business-logic...");
+            LOG.info(passengerTrain);
+            LOG.info("Testing business-logic...");
 
             if (!passengerTrain.isEmpty()) {
                 //total number of passengers in train;
-                LOG_INFO.log(Level.INFO, "Total number of passengers = "
-                        + TrainCharacteristic.countTotalNumberOfPassengers(passengerTrain));
+                LOG.info("Total number of passengers = "
+                        + TrainCharacteristic.countTotalNumberOfPassengers(passengerTrain, LOG));
 
                 //total luggage weight
-                LOG_INFO.log(Level.INFO, "Total luggage weight = "
-                        + TrainCharacteristic.countTotalLuggageWeight(passengerTrain));
+                LOG.info("Total luggage weight = " + TrainCharacteristic.countTotalLuggageWeight(passengerTrain, LOG));
 
                 //sorting
-                LOG_INFO.log(Level.INFO, "Passenger train after sorting carriages by type of comfort:");
+                LOG.info("Passenger train after sorting carriages by type of comfort:");
                 Sorter.sortPassengerCarriagesByTypeOfComfort(passengerTrain);
-                LOG_INFO.log(Level.INFO, passengerTrain);
+                LOG.info(passengerTrain);
 
                 //find carriages with specific range
                 int leftBorder = IntegerInitializer.initNumber(0, 100);
                 int rightBorder = IntegerInitializer.initNumber(leftBorder, 100);
-                LOG_INFO.log(Level.INFO, "Carriages with number of passengers in range: [" + leftBorder + ", "
-                        + rightBorder + "]:");
-                Searcher.findCarriagesWithSpecificNumberOfPassengers(passengerTrain, leftBorder, rightBorder, LOG_INFO);
+                LOG.info("Carriages with number of passengers in range: [" + leftBorder + ", " + rightBorder + "]:");
+                Searcher.findCarriagesWithSpecificNumberOfPassengers(passengerTrain, leftBorder, rightBorder, LOG);
             }
         } catch (WrongTypeOfComfortException e) {
-            LOG_ERROR.log(Level.ERROR, e.getMessage() + e.getTypeOfComfort());
+            LOG.error(e.getMessage() + e.getTypeOfComfort(), e);
         } catch (NegativeNumberException e) {
-            LOG_ERROR.log(Level.ERROR, e.getMessage() + e.getNumber());
+            LOG.error(e.getMessage() + e.getNumber(), e);
         } catch (WrongRangeOfRandomException e) {
-            LOG_ERROR.log(Level.ERROR, e.getMessage());
+            LOG.error(e.getMessage(), e);
         } finally {
-            LOG_INFO.log(Level.INFO, "The application was stopped! Thank you for working with us:)");
+            LOG.info("The application was stopped! Thank you for working with us:)");
         }
     }
 }

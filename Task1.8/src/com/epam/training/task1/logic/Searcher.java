@@ -24,11 +24,11 @@ public class Searcher {
             if (carriage instanceof PassengerCarriage &&
                     isCarriageInRange((PassengerCarriage) carriage, leftBorder, rightBorder)){
                 flag = true;
-                logger.log(Level.INFO, carriage);
+                logger.info(carriage);
             }
         }
         if (!flag){
-            logger.log(Level.INFO, "No carriages with this range.");
+            logger.info("No carriages with this range.");
         }
     }
 
