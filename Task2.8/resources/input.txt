@@ -1,0 +1,7 @@
+In 1979, Honeywell Information Systems announced a new programming language for their time-sharing service named TEX,
+an acronym for the Text Executive text processing system. TEX was a first generation scripting language, developed
+around the time of AWK and used by Honeywell initially as an in-house system test automation tool.
+
+TEX extended the Honeywell Time-Sharing service (TSS) line editor with programmable capabilities which allowed the user
+greater latitude in developing ease-of-use editing extensions as well as write scripts to automate many other
+time-sharing tasks formerly done by more complex TSS FORTRAN programs.
