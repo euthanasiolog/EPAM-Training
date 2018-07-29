@@ -3,8 +3,8 @@ package com.epam.training.task1.controller;
 /**
  * Starter is the class-tester of business-logic.
  *
- * -version 3.0
- * 22 July 2018
+ * -version 3.1
+ * 29 July 2018
  * @author Arthur Lyup
  */
 
@@ -22,7 +22,7 @@ import org.apache.log4j.Logger;
 
 
 public class Starter {
-
+    //logging information
     private static final Logger LOG = Logger.getLogger(Starter.class);
 
     public static void main(String[] args) {
@@ -33,14 +33,14 @@ public class Starter {
             //making passenger train
             PassengerTrain passengerTrain = new PassengerTrain();
 
-            LOG.info("Passenger train was done...");
+            LOG.info("Passenger train was made...");
             LOG.info("Initialization of passenger train...");
 
             //initialization passenger train with specific number of carriages
             int numberOfCarriages = 10;
             PassengerTrainInitializer.initPassengerTrain(passengerTrain, numberOfCarriages, LOG);
 
-            LOG.info("Initialization was successfully made...");
+            LOG.info("Initialization was successfully done...");
             LOG.info("Printing information about passenger train:");
 
             //printing information about passenger train
@@ -67,10 +67,13 @@ public class Starter {
                 Searcher.findCarriagesWithSpecificNumberOfPassengers(passengerTrain, leftBorder, rightBorder, LOG);
             }
         } catch (WrongTypeOfComfortException e) {
+            LOG.info(e.getMessage());
             LOG.error(e.getMessage() + e.getTypeOfComfort(), e);
         } catch (NegativeNumberException e) {
+            LOG.info(e.getMessage());
             LOG.error(e.getMessage() + e.getNumber(), e);
         } catch (WrongRangeOfRandomException e) {
+            LOG.info(e.getMessage());
             LOG.error(e.getMessage(), e);
         } finally {
             LOG.info("The application was stopped! Thank you for working with us:)");
