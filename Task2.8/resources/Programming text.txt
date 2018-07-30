@@ -1,0 +1,47 @@
+    Consider the creation of many different threads. But this is a more general solution and easier to understand, so while the previous example shows a coding style you’ll often see, I can’t recommend it for most cases because it’s just a little bit more confusing and less flexible.
+    The following example repeats the form of the examples above with counters and toggle buttons. But now all the information for a particular counter, including the button and text field, is inside its own object that is inherited from Thread. All the fields in Ticker are private, which means that the Ticker implementation can be changed at will, including the quantity and type of data components to acquire and display information. When a Ticker object is created, the constructor adds its visual components to the content pane of the outer object:
+
+Start listing
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import com.bruceeckel.swing.*;
+
+public class Counter4 extends JApplet {
+  private JButton start = new JButton("Start");
+  private boolean started = false;
+  private Ticker[] s;
+  private boolean isApplet = true;
+  private int size = 12;
+  class Ticker extends Thread {
+    private JButton b = new JButton("Toggle");
+    private JTextField t = new JTextField(10);
+    private int count = 0;
+    private boolean runFlag = true;
+    public Ticker() {
+      b.addActionListener(new ToggleL());
+      JPanel p = new JPanel();
+      p.add(t);
+      p.add(b);
+      // Calls JApplet.getContentPane().add():
+      getContentPane().add(p);
+    }
+    class ToggleL implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+        runFlag = !runFlag;
+      }
+    }
+    public void run() {
+      while (true) {
+        if (runFlag)
+          t.setText(Integer.toString(count++));
+        try {
+          sleep(100);
+        } catch(InterruptedException e) {
+          System.err.println("Interrupted");
+        }
+      }
+    }
+  }
+}
+End listing
