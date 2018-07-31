@@ -3,7 +3,7 @@ package com.epam.training.task1.controller;
 /**
  * Starter is the class-tester of business-logic.
  *
- * -version 3.1
+ * -version 3.2
  * 29 July 2018
  * @author Arthur Lyup
  */
@@ -38,7 +38,7 @@ public class Starter {
 
             //initialization passenger train with specific number of carriages
             int numberOfCarriages = 10;
-            PassengerTrainInitializer.initPassengerTrain(passengerTrain, numberOfCarriages, LOG);
+            PassengerTrainInitializer.initPassengerTrain(passengerTrain, numberOfCarriages);
 
             LOG.info("Initialization was successfully done...");
             LOG.info("Printing information about passenger train:");
@@ -50,10 +50,10 @@ public class Starter {
             if (!passengerTrain.isEmpty()) {
                 //total number of passengers in train;
                 LOG.info("Total number of passengers = "
-                        + TrainCharacteristic.countTotalNumberOfPassengers(passengerTrain, LOG));
+                        + TrainCharacteristic.countTotalNumberOfPassengers(passengerTrain));
 
                 //total luggage weight
-                LOG.info("Total luggage weight = " + TrainCharacteristic.countTotalLuggageWeight(passengerTrain, LOG));
+                LOG.info("Total luggage weight = " + TrainCharacteristic.countTotalLuggageWeight(passengerTrain));
 
                 //sorting
                 LOG.info("Passenger train after sorting carriages by type of comfort:");
@@ -64,7 +64,7 @@ public class Starter {
                 int leftBorder = IntegerInitializer.initNumber(0, 100);
                 int rightBorder = IntegerInitializer.initNumber(leftBorder, 100);
                 LOG.info("Carriages with number of passengers in range: [" + leftBorder + ", " + rightBorder + "]:");
-                Searcher.findCarriagesWithSpecificNumberOfPassengers(passengerTrain, leftBorder, rightBorder, LOG);
+                Searcher.findCarriagesWithSpecificNumberOfPassengers(passengerTrain, leftBorder, rightBorder);
             }
         } catch (WrongTypeOfComfortException e) {
             LOG.info(e.getMessage());

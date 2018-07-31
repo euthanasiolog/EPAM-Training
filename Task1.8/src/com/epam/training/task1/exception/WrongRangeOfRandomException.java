@@ -9,13 +9,23 @@ package com.epam.training.task1.exception;
  */
 
 public class WrongRangeOfRandomException extends Exception {
-    public WrongRangeOfRandomException(){}
-
-    public WrongRangeOfRandomException(String msg){
-        super(msg);
+    public WrongRangeOfRandomException() {
     }
 
-    public WrongRangeOfRandomException(String msg, Exception e){
-        super(msg, e);
+    public WrongRangeOfRandomException(String message) {
+        super(message);
+    }
+
+    public WrongRangeOfRandomException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public WrongRangeOfRandomException(Throwable cause) {
+        super(cause);
+    }
+
+    public WrongRangeOfRandomException(String message, Throwable cause, boolean enableSuppression, boolean
+            writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
     }
 }

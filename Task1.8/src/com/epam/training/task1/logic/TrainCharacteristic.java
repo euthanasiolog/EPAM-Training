@@ -17,15 +17,17 @@ import com.epam.training.task1.model.entity.carriage.passenger.PassengerCarriage
 import org.apache.log4j.Logger;
 
 public class TrainCharacteristic {
+    private static final Logger LOG = Logger.getLogger(TrainCharacteristic.class);
+
     //count total numbers of passengers
-    public static int countTotalNumberOfPassengers(PassengerTrain passengerTrain, Logger logger){
+    public static int countTotalNumberOfPassengers(PassengerTrain passengerTrain){
         int totalNumberOfPassengers = 0;
         for (Carriage carriage: passengerTrain.getCarriages()){
             if (carriage instanceof PassengerCarriage){
                 totalNumberOfPassengers +=
                         ((PassengerCarriage) carriage).getNumberOfPassengers();
-                if (logger.isDebugEnabled()) {
-                    logger.debug("Counting number of passengers = " + totalNumberOfPassengers);
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Counting number of passengers = " + totalNumberOfPassengers);
                 }
             }
         }
@@ -33,13 +35,13 @@ public class TrainCharacteristic {
     }
 
     //count total luggageWeight
-    public static double countTotalLuggageWeight(PassengerTrain passengerTrain, Logger logger){
+    public static double countTotalLuggageWeight(PassengerTrain passengerTrain){
         double totalLuggageWeight = 0.0;
         for (Carriage carriage: passengerTrain.getCarriages()){
             if (carriage instanceof FreightCarriage){
                 totalLuggageWeight += ((FreightCarriage) carriage).getLuggageWeight();
-                if (logger.isDebugEnabled()) {
-                    logger.debug("Counting luggage weight = " + totalLuggageWeight);
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Counting luggage weight = " + totalLuggageWeight);
                 }
             }
         }

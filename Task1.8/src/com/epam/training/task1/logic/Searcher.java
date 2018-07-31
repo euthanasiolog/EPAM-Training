@@ -12,23 +12,24 @@ package com.epam.training.task1.logic;
 import com.epam.training.task1.model.entity.PassengerTrain;
 import com.epam.training.task1.model.entity.carriage.Carriage;
 import com.epam.training.task1.model.entity.carriage.passenger.PassengerCarriage;
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 public class Searcher {
+    private static final Logger LOG = Logger.getLogger(Searcher.class);
+
     //find carriages with specific range of numbers of passengers
-    public static void findCarriagesWithSpecificNumberOfPassengers(PassengerTrain passengerTrain, int leftBorder,
-                                                                   int rightBorder, Logger logger) {
+    public static void findCarriagesWithSpecificNumberOfPassengers(PassengerTrain passengerTrain, int leftBorder, int
+            rightBorder) {
         boolean flag = false;
         for (Carriage carriage: passengerTrain.getCarriages()){
             if (carriage instanceof PassengerCarriage &&
                     isCarriageInRange((PassengerCarriage) carriage, leftBorder, rightBorder)){
                 flag = true;
-                logger.info(carriage);
+                LOG.info(carriage);
             }
         }
         if (!flag){
-            logger.info("No carriages with this range.");
+            LOG.info("No carriages with this range.");
         }
     }
 

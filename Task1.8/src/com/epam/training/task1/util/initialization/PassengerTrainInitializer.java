@@ -23,16 +23,18 @@ public class PassengerTrainInitializer {
     private static final int LEFT_BORDER_NUMBER = 0;
     private static final String[] NAMES = {"Rusich", "Yauza", "Oka", "Moscow", "Wind", "Lightning", "Tit", "Volga",
             "Bullfinch", "Meteor", "Capital", "Megapolis", "Lena", "Talgo", "Peregrine Falcon", "Swallow", "Dove"};
+    //logging information
+    private static final Logger LOG = Logger.getLogger(PassengerTrainInitializer.class);
 
     //initialization of passenger train
-    public static void initPassengerTrain(PassengerTrain passengerTrain, int numberOfCarriages, Logger logger)
+    public static void initPassengerTrain(PassengerTrain passengerTrain, int numberOfCarriages)
             throws WrongTypeOfComfortException, NegativeNumberException {
         if (numberOfCarriages < MIN_NATURAL_NUMBER){
             throw new NegativeNumberException("Number of carriages can't be < 0!: ", numberOfCarriages);
         }
         passengerTrain.setName(NAMES[getRandomInt(0, NAMES.length)]);
         Random random = new Random();
-        logger.info( "Initialization of carriages...");
+        LOG.info( "Initialization of carriages...");
         for (int i = 0; i < numberOfCarriages; i++){
             if (random.nextBoolean()){
                 PassengerCarriage passengerCarriage = new PassengerCarriage();
