@@ -11,6 +11,8 @@ public class FileRestorer {
     private static final String RECOGNIZE_PARAGRAPHS_AND_LISTINGS = "(Paragraph:.+)" +
             "|(Listing:\\n\\s{4}\\/\\*.+\\*\\/(?:(?:\\n.+)|(\\n\\s{4}\\}))+)";
     private static final String RECOGNIZE_PARAGRAPH = "(Paragraph:.+)";
+    private static final int BEGIN_SUBSTRING_FOR_PARAGRAPHS = 10;
+    private static final int BEGIN_SUBSTRING_FOR_LISTINGS = 8;
 
     public static Composite restoreFile(String parsedFile) throws IOException {
         Composite restoredFile = new Composite();
@@ -22,10 +24,10 @@ public class FileRestorer {
                 while (matcher.find()){
                     String plotOfText = matcher.group();
                     if (Pattern.matches(RECOGNIZE_PARAGRAPH, plotOfText)){
-                        plotOfText = plotOfText.substring(10);
+                        plotOfText = plotOfText.substring(BEGIN_SUBSTRING_FOR_PARAGRAPHS);
                         restoredFile.addComponent(new Leaf("    " + plotOfText + "\n"));
                     } else {
-                        plotOfText = plotOfText.substring(8);
+                        plotOfText = plotOfText.substring(BEGIN_SUBSTRING_FOR_LISTINGS);
                         restoredFile.addComponent(new Leaf("    " + plotOfText + "\n"));
                     }
                 }
