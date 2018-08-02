@@ -1,12 +1,8 @@
 package com.epam.training.task2.model.entity.composite;
 
-import org.apache.log4j.Logger;
-
 public class Leaf implements Component {
     //field
     private String content;
-    //logging information
-    private static final Logger LOG = Logger.getLogger(Leaf.class);
 
     public Leaf(){
 
@@ -26,12 +22,12 @@ public class Leaf implements Component {
     }
 
     @Override
-    public void addComponent(Component component) {
-        LOG.error("Error! Operation of adding isn't supported for words");
+    public String print() {
+        return toString();
     }
 
     @Override
     public String toString() {
-        return "content=" + content;
+        return content;
     }
 }

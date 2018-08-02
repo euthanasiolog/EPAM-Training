@@ -1,6 +1,7 @@
 package com.epam.training.task2.model.entity.composite;
 
 //import statements
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,9 +31,17 @@ public class Composite implements Component{
     }
 
     //work with components
-    @Override
     public void addComponent(Component component){
         components.add(component);
+    }
+
+    @Override
+    public String print() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Component component: components){
+            stringBuilder.append(component.print());
+        }
+        return stringBuilder.toString();
     }
 
     @Override
@@ -55,13 +64,8 @@ public class Composite implements Component{
         return prime * ((null == components) ? 0 : components.hashCode());
     }
 
-    @Override
+    /*@Override
     public String toString(){
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Component component: components){
-            stringBuilder.append(component);
-            stringBuilder.append("\n");
-        }
-        return stringBuilder.toString();
-    }
+
+    }*/
 }
