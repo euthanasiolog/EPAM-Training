@@ -1,7 +1,13 @@
 package com.epam.training.task2.model.entity.composite;
 
+/**
+ * Composite is the class-container of components.
+ *
+ * 5 August 2018
+ * @author Arthur Lyup
+ */
+
 //import statements
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,9 +69,4 @@ public class Composite implements Component{
         int prime = 31;
         return prime * ((null == components) ? 0 : components.hashCode());
     }
-
-    /*@Override
-    public String toString(){
-
-    }*/
 }

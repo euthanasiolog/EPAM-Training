@@ -16,7 +16,7 @@ public class RestoreFileException extends Exception {
         super(cause);
     }
 
-    public RestoreFileException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace){
+    public RestoreFileException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }

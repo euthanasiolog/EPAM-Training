@@ -1,5 +1,12 @@
 package com.epam.training.task2.exception;
 
+/**
+ * ParseTextException is the exception class which throws the exception when user tries to parse the empty text.
+ *
+ * 5 August 2018
+ * @author Arthur Lyup
+ */
+
 public class ParseTextException extends Exception {
     public ParseTextException() {
     }

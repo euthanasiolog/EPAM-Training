@@ -1,5 +1,13 @@
-package com.epam.training.task2.service.parse;
+package com.epam.training.task2.logic.common.parse;
 
+/**
+ * BaseParser is the abstract class which implements interface Parser.
+ *
+ * 5 August 2018
+ * @author Arthur Lyup
+ */
+
+//import statements
 import org.apache.log4j.Logger;
 
 public abstract class BaseParser implements Parser {

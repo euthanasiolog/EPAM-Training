@@ -1,5 +1,12 @@
 package com.epam.training.task2.util.file;
 
+/**
+ * Reader is the class-reader which reads information from file.
+ *
+ * 5 August 2018
+ * @author Arthur Lyup
+ */
+
 //import statements
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -37,7 +37,7 @@
     No object of Parcel10 is necessary; instead you use the normal syntax for selecting a static member to call the methods that return references to Contents and Destination.
     Normally you can’t put any code inside an interface, but a static inner class can be part of an interface.
 
-    /* c08:IInterface.java.Static inner classes inside interfaces.*/
+    /* c08 IInterface.java.Static inner classes inside interfaces.*/
     interface IInterface {
         static class Inner {
             int i, j, k;

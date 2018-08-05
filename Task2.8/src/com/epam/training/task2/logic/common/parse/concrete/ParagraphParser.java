@@ -1,9 +1,17 @@
-package com.epam.training.task2.service.parse.concrete;
+package com.epam.training.task2.logic.common.parse.concrete;
 
+/**
+ * ParagraphParser is the class-parser of paragraphs to sentences.
+ *
+ * 5 August 2018
+ * @author Arthur Lyup
+ */
+
+//import statements
 import com.epam.training.task2.exception.ParseTextException;
 import com.epam.training.task2.model.entity.composite.Composite;
 import com.epam.training.task2.model.entity.composite.Leaf;
-import com.epam.training.task2.service.parse.BaseParser;
+import com.epam.training.task2.logic.common.parse.BaseParser;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
