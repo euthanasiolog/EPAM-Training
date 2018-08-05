@@ -71,6 +71,7 @@ public class Starter {
             List<Word> wordsWithFirstVowelLetter = WordParser.parse(inputFileTextToParse);
             LOG.info("Searching words was completed successfully. Printing them to console:");
             LOG.info(wordsWithFirstVowelLetter);
+
             LOG.info("Sorting words by first consonant letter...");
             Sorter.sortWordsWithFirstVowelLetterByFirstConsonantLetter(wordsWithFirstVowelLetter);
             String resultOfSorting = "resources/sorting/Result of sorting.txt";
