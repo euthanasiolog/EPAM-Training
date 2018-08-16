@@ -3,7 +3,6 @@ package com.epam.task3.controller;
 //import statements
 import com.epam.task3.entity.Train;
 import com.epam.task3.logic.TunnelManager;
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
