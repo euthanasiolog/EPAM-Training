@@ -20,7 +20,7 @@ public class TunnelManager {
 
     //work with multi-threads
     private static AtomicBoolean instanceCreated = new AtomicBoolean();
-    private static TunnelManager instance = null;
+    private static TunnelManager instance;
     private static ReentrantLock lock = new ReentrantLock();
 
     //private constructor because of pattern singleton
