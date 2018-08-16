@@ -1,9 +1,7 @@
 package com.epam.task3.entity;
 
 import com.epam.task3.logic.TunnelManager;
-import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
